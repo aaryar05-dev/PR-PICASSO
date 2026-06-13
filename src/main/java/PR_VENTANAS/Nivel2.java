@@ -54,17 +54,35 @@ public class Nivel2 extends javax.swing.JFrame implements BaseNVL{
         setIconImage(new ImageIcon(getClass().getClassLoader().getResource("PR_RECURSOS/sonic.png")).getImage());
         this.usuarioActual = usuarioActual;
         this.gestor = gestor;
+        
+       
+        jlblMundo.setForeground(java.awt.Color.WHITE);
+        jlblPregunta.setForeground(java.awt.Color.WHITE);
+        
+        jbtnOpcion1.setForeground(java.awt.Color.WHITE);
+        jbtnOpcion2.setForeground(java.awt.Color.WHITE);
+        jbtnOpcion3.setForeground(java.awt.Color.WHITE);
+        jbtnOpcion4.setForeground(java.awt.Color.WHITE);
+        
         mostrarPregunta();
         musica.reproducir("PR_RECURSOS/nivel2.wav");
         tutorial();
     }
     
     private void tutorial(){
-        JOptionPane.showMessageDialog(this,"MUNDO 2 - ORTOGRAFÍA\n\n"
-            + "Observa la imagen mostrada.\n"
-            + "Selecciona la palabra escrita correctamente.\n\n"
-            + "Cada respuesta correcta te permitirá avanzar.");
+        JOptionPane.showMessageDialog(this,
+                "¡BIENVENIDO A TAGROF!\n\n" +
+                "TAGROF es el mundo de la ortografía.\n" +
+                "Aquí demostrarás tu habilidad para reconocer las palabras escritas correctamente.\n\n" +
+                "REGLAS DEL MUNDO:\n" +
+                "• Observa atentamente la imagen mostrada.\n" +
+                "• Analiza las opciones disponibles.\n" +
+                "• Selecciona la palabra escrita correctamente.\n" +
+                "• Cada respuesta correcta te permitirá avanzar.\n\n" +
+                "Completa todos los desafíos para obtener la medalla de TAGROF.\n\n" +
+                "¡La buena ortografía será tu mejor aliada en esta aventura!");
     }
+    
     @Override
     public void mostrarPregunta() {
         jlblPregunta.setText("Observa la imagen y elige la palabra escrita correctamente:");
@@ -159,25 +177,25 @@ public class Nivel2 extends javax.swing.JFrame implements BaseNVL{
         getContentPane().add(jlblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, -1, -1));
 
         jbtnOpcion1.setBackground(new java.awt.Color(153, 102, 0));
-        jbtnOpcion1.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
+        jbtnOpcion1.setFont(new java.awt.Font("OCR A Extended", 1, 18)); // NOI18N
         jbtnOpcion1.setText("OPCION 1");
         jbtnOpcion1.addActionListener(this::jbtnOpcion1ActionPerformed);
         getContentPane().add(jbtnOpcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         jbtnOpcion2.setBackground(new java.awt.Color(153, 102, 0));
-        jbtnOpcion2.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
+        jbtnOpcion2.setFont(new java.awt.Font("OCR A Extended", 1, 18)); // NOI18N
         jbtnOpcion2.setText("OPCION 2");
         jbtnOpcion2.addActionListener(this::jbtnOpcion2ActionPerformed);
         getContentPane().add(jbtnOpcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
 
         jbtnOpcion3.setBackground(new java.awt.Color(153, 102, 0));
-        jbtnOpcion3.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
+        jbtnOpcion3.setFont(new java.awt.Font("OCR A Extended", 1, 18)); // NOI18N
         jbtnOpcion3.setText("OPCION 3");
         jbtnOpcion3.addActionListener(this::jbtnOpcion3ActionPerformed);
         getContentPane().add(jbtnOpcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, -1, -1));
 
         jbtnOpcion4.setBackground(new java.awt.Color(153, 102, 0));
-        jbtnOpcion4.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
+        jbtnOpcion4.setFont(new java.awt.Font("OCR A Extended", 1, 18)); // NOI18N
         jbtnOpcion4.setText("OPCION 4");
         jbtnOpcion4.addActionListener(this::jbtnOpcion4ActionPerformed);
         getContentPane().add(jbtnOpcion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, -1, -1));

@@ -37,10 +37,17 @@ public class Nivel3 extends javax.swing.JFrame implements BaseNVL {
     }
     
     private void tutorial(){
-        JOptionPane.showMessageDialog(this,"MUNDO 3 - CRUCIGRAMA\n\n"
-            + "Completa el crucigrama utilizando las pistas.\n"
-            + "Cada casilla admite una sola letra.\n\n"
-            + "Cuando termines, presiona CONFIRMAR.");
+        JOptionPane.showMessageDialog(this,
+            "¡BIENVENIDO A CIGRA!\n\n" +
+            "CIGRA es el mundo de los crucigramas.\n" +
+            "Aquí pondrás a prueba tus conocimientos sobre los temas de Comunicación.\n\n" +
+            "REGLAS DEL MUNDO:\n" +
+            "• Lee cuidadosamente cada pista.\n" +
+            "• Completa las palabras en el crucigrama.\n" +
+            "• Cada casilla admite una sola letra.\n" +
+            "• Utiliza lo que has aprendido para encontrar las respuestas correctas.\n\n" +
+            "Cuando termines, presiona CONFIRMAR.\n\n" +
+            "Demuestra tus conocimientos y consigue la medalla de CIGRA.");
     }
     
     private void configurarCasilla(JTextField campo) {

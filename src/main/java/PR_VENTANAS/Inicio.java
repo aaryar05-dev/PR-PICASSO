@@ -28,6 +28,12 @@ public class Inicio extends javax.swing.JFrame {
         gestor = new GestionUsuarios();
         jbtnInicio.setEnabled(false);
         setIconImage(new ImageIcon(getClass().getClassLoader().getResource("PR_RECURSOS/sonic.png")).getImage());
+        
+        
+        jbtnSalir.setForeground(java.awt.Color.WHITE);
+        jbtnInicio.setForeground(java.awt.Color.WHITE);
+        jbtnCreditos.setForeground(java.awt.Color.WHITE);
+        jLabel2.setForeground(java.awt.Color.WHITE);
     }
     
     
@@ -149,6 +155,8 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnCreditosActionPerformed
      
     public static void main(String args[]) {
+        
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

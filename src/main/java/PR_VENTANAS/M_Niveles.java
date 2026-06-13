@@ -15,6 +15,7 @@ public class M_Niveles extends javax.swing.JFrame {
 
     public M_Niveles() {
         initComponents();
+        
     }
     
     public M_Niveles(Usuarios usuarioActual, GestionUsuarios gestor) {
@@ -25,6 +26,12 @@ public class M_Niveles extends javax.swing.JFrame {
         mostrarProgreso();
         musica.reproducir("PR_RECURSOS/menu.wav");
         setIconImage(new ImageIcon(getClass().getClassLoader().getResource("PR_RECURSOS/sonic.png")).getImage());
+        
+        jbtnNivel1.setForeground(java.awt.Color.WHITE);
+        jbtnNivel2.setForeground(java.awt.Color.WHITE);
+        jbtnNivel3.setForeground(java.awt.Color.WHITE);
+        
+        
         
         jlblFeli.setVisible(false);
             if (usuarioActual.getNivel1() == 1 && usuarioActual.getNivel2() == 1 && usuarioActual.getNivel3() == 1){
@@ -57,10 +64,12 @@ public class M_Niveles extends javax.swing.JFrame {
         javax.swing.JOptionPane.showMessageDialog(
             this,
             "EL RESCATE DEL PINGÜINO\n\n" +
-            "El Rey Mono ha secuestrado a nuestro amigo Pingüino.\n\n" +
-            "Para rescatarlo, deberás superar los retos de los 3 mundos\n" +
-            "y conseguir las 3 medallas.\n\n" +
-            "Cuando completes tu misión, el Pingüino será libre nuevamente.",
+            "El malvado Rey Mono ha secuestrado a nuestro amigo Pingüino.\n\n" +
+            "Para rescatarlo, deberás viajar por los tres mundos legendarios:\n" +
+            "TAGROF, SINOOS y CIGRA.\n\n" +
+            "Supera todos los desafíos, consigue las 3 medallas sagradas\n" +
+            "y enfréntate a tu destino.\n\n" +
+            "Solo entonces el Pingüino volverá a ser libre.",
             "Historia",
             javax.swing.JOptionPane.INFORMATION_MESSAGE);
     }

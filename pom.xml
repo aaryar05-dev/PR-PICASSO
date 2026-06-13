@@ -11,4 +11,11 @@
         <exec.mainClass>com.mycompany.math.adventure.PRPICASSO</exec.mainClass>
     </properties>
     <name>PR-PICASSO</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE280</version>
+        </dependency>
+    </dependencies>
 </project>

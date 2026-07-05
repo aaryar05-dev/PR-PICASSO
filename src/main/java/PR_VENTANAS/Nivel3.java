@@ -47,7 +47,8 @@ public class Nivel3 extends javax.swing.JFrame implements BaseNVL {
             "• Cada casilla admite una sola letra.\n" +
             "• Utiliza lo que has aprendido para encontrar las respuestas correctas.\n\n" +
             "Cuando termines, presiona CONFIRMAR.\n\n" +
-            "Demuestra tus conocimientos y consigue la medalla de CIGRA.");
+            "Demuestra tus conocimientos y consigue la medalla de CIGRA.",
+            "Tutorial",JOptionPane.PLAIN_MESSAGE);
     }
     
     private void configurarCasilla(JTextField campo) {
@@ -451,7 +452,8 @@ public class Nivel3 extends javax.swing.JFrame implements BaseNVL {
             + "2. Narración breve con personajes y acontecimientos.\n"
             + "3. Relato que deja una enseñanza o moraleja.\n"
             + "7. Contar una historia o acontecimiento mediante palabras.\n"
-            + "8. Unidad básica con la que se forman las palabras."
+            + "8. Unidad básica con la que se forman las palabras.","PISTAS",
+            JOptionPane.PLAIN_MESSAGE
         );
     }//GEN-LAST:event_jbtnPistasActionPerformed
 
@@ -599,7 +601,7 @@ public class Nivel3 extends javax.swing.JFrame implements BaseNVL {
 
         if(verificarRespuesta()) {
             completarNivel();
-            JOptionPane.showMessageDialog(this,"¡Muy bien! Completaste el Mundo 3.");
+            JOptionPane.showMessageDialog(this,"¡Muy bien! Completaste el Mundo 3.","CIGRA",JOptionPane.PLAIN_MESSAGE);
 
             M_Niveles menu = new M_Niveles(usuarioActual, gestor);
             menu.setVisible(true);
@@ -608,7 +610,7 @@ public class Nivel3 extends javax.swing.JFrame implements BaseNVL {
 
 
         } else {
-            JOptionPane.showMessageDialog(this, "Hay palabras incorrectas en el crucigrama.");
+            JOptionPane.showMessageDialog(this, "Hay palabras incorrectas en el crucigrama.","CIGRA",JOptionPane.PLAIN_MESSAGE);
         }
     }//GEN-LAST:event_jbtnConfRespActionPerformed
 

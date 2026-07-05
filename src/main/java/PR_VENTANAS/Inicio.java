@@ -151,7 +151,7 @@ public class Inicio extends javax.swing.JFrame {
         "© 2026\n\n" +
         "Gracias por jugar.",
         "Créditos",
-        JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.PLAIN_MESSAGE);
     }//GEN-LAST:event_jbtnCreditosActionPerformed
      
     public static void main(String args[]) {

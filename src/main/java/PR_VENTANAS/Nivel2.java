@@ -80,7 +80,8 @@ public class Nivel2 extends javax.swing.JFrame implements BaseNVL{
                 "• Selecciona la palabra escrita correctamente.\n" +
                 "• Cada respuesta correcta te permitirá avanzar.\n\n" +
                 "Completa todos los desafíos para obtener la medalla de TAGROF.\n\n" +
-                "¡La buena ortografía será tu mejor aliada en esta aventura!");
+                "¡La buena ortografía será tu mejor aliada en esta aventura!",
+                "Tutorial",JOptionPane.PLAIN_MESSAGE);
     }
     
     @Override
@@ -200,13 +201,16 @@ public class Nivel2 extends javax.swing.JFrame implements BaseNVL{
         jbtnOpcion4.addActionListener(this::jbtnOpcion4ActionPerformed);
         getContentPane().add(jbtnOpcion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, -1, -1));
 
+        jbtnRegresar.setBackground(new java.awt.Color(153, 102, 0));
         jbtnRegresar.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
         jbtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PR_RECURSOS/flecha.png"))); // NOI18N
         jbtnRegresar.setText("REGRESAR");
         jbtnRegresar.addActionListener(this::jbtnRegresarActionPerformed);
         getContentPane().add(jbtnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 397, 180, 50));
 
+        jbtnTutorial.setBackground(new java.awt.Color(153, 102, 0));
         jbtnTutorial.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
+        jbtnTutorial.setForeground(new java.awt.Color(255, 255, 255));
         jbtnTutorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PR_RECURSOS/infos.png"))); // NOI18N
         jbtnTutorial.setText("info");
         jbtnTutorial.addActionListener(this::jbtnTutorialActionPerformed);

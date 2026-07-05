@@ -71,7 +71,7 @@ public class M_Niveles extends javax.swing.JFrame {
             "y enfréntate a tu destino.\n\n" +
             "Solo entonces el Pingüino volverá a ser libre.",
             "Historia",
-            javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            javax.swing.JOptionPane.PLAIN_MESSAGE);
     }
     private void mostrarProgreso() {
         int completados = 0;

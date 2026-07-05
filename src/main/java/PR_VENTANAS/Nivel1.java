@@ -66,11 +66,13 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
             "• Observa las opciones disponibles.\n" +
             "• Escribe el sinónimo correcto.\n" +
             "• Cada respuesta correcta te acerca a la medalla del mundo.\n\n" +
-            "Completa todas las preguntas para superar el nivel y continuar tu aventura.");
+            "Completa todas las preguntas para superar el nivel y continuar tu aventura.",
+            "Tutorial",JOptionPane.PLAIN_MESSAGE
+            );
     }
     @Override
     public void mostrarPregunta() {
-        jLabel2.setText("Elige el sinonimo de: " + palabras[preguntaActual]);
+        jlblPregun.setText("Elige el sinonimo de: " + palabras[preguntaActual]);
 
         jlblAlt1.setText(opciones[preguntaActual][0]);
         jlblAlt2.setText(opciones[preguntaActual][1]);
@@ -129,7 +131,7 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
         jPanel3 = new javax.swing.JPanel();
         jlblAlt2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        jlblPregun = new javax.swing.JLabel();
         jlblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -138,12 +140,16 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("MUNDO 1 - SINONIMOS");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Escribe la respuesta");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+
+        jtxtRespuesta.setBackground(new java.awt.Color(0, 102, 102));
         getContentPane().add(jtxtRespuesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 190, 30));
 
         jbtnAceptar.setBackground(new java.awt.Color(0, 102, 102));
@@ -152,6 +158,7 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
         jbtnAceptar.addActionListener(this::jbtnAceptarActionPerformed);
         getContentPane().add(jbtnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, -1, 30));
 
+        jbtnRegresar.setBackground(new java.awt.Color(0, 102, 102));
         jbtnRegresar.setFont(new java.awt.Font("Kristen ITC", 1, 12)); // NOI18N
         jbtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PR_RECURSOS/flecha.png"))); // NOI18N
         jbtnRegresar.setText("REGRESAR");
@@ -165,6 +172,7 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
         jbtnTutorial.addActionListener(this::jbtnTutorialActionPerformed);
         getContentPane().add(jbtnTutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, -1, -1));
 
+        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 153, 153)));
 
         jlblAlt1.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
@@ -175,20 +183,21 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(25, 25, 25)
                 .addComponent(jlblAlt1)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jlblAlt1)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 210, 40));
 
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
         jPanel2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 153, 153)));
 
         jlblAlt3.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
@@ -213,6 +222,7 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, -1, 40));
 
+        jPanel3.setBackground(new java.awt.Color(0, 102, 102));
         jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 153, 153)));
 
         jlblAlt2.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
@@ -237,10 +247,11 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, -1));
 
+        jPanel4.setBackground(new java.awt.Color(0, 102, 102));
         jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 153, 153)));
 
-        jLabel2.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
-        jLabel2.setText("Elige un sinonimo de :");
+        jlblPregun.setFont(new java.awt.Font("Kristen ITC", 1, 18)); // NOI18N
+        jlblPregun.setText("Elige un sinonimo de :");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -248,14 +259,14 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(jlblPregun)
                 .addContainerGap(181, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(jlblPregun)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -278,16 +289,16 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
         preguntaActual++;
 
         if (preguntaActual < palabras.length) {
-            JOptionPane.showMessageDialog(this, "¡Correcto! Siguiente palabra.");
+            JOptionPane.showMessageDialog(this, "¡Correcto! Siguiente palabra.","SINOOS",JOptionPane.PLAIN_MESSAGE);
             mostrarPregunta();
         } else {
             completarNivel();
             regresarMenu();
         }
 
-    } else {
-        JOptionPane.showMessageDialog(this, "Respuesta incorrecta.");
-    }
+        } else {
+            JOptionPane.showMessageDialog(this, "Respuesta incorrecta.","SINOOS",JOptionPane.PLAIN_MESSAGE);
+        }
     }//GEN-LAST:event_jbtnAceptarActionPerformed
 
     private void jbtnTutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTutorialActionPerformed
@@ -321,7 +332,6 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -334,6 +344,7 @@ public class Nivel1 extends javax.swing.JFrame implements BaseNVL{
     private javax.swing.JLabel jlblAlt2;
     private javax.swing.JLabel jlblAlt3;
     private javax.swing.JLabel jlblFondo;
+    private javax.swing.JLabel jlblPregun;
     private javax.swing.JTextField jtxtRespuesta;
     // End of variables declaration//GEN-END:variables
 }
